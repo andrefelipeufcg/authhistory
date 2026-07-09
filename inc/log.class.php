@@ -19,7 +19,11 @@ class PluginAuthhistoryLog extends CommonDBTM {
     
     // Define que a aba aparecerá no formulário de Usuários
     function getTabNameForItem(CommonGLPI $item, $withtemplate = 0) {
-        if ($item->getType() == 'User' && Session::haveRight('user', READ)) {
+        // Verifica se é o perfil Super-Admin (ID 4 padrão ou pelo nome)
+        $is_superadmin = (isset($_SESSION['glpiactiveprofile']['id']) && $_SESSION['glpiactiveprofile']['id'] == 4) 
+                      || (isset($_SESSION['glpiactiveprofile']['name']) && $_SESSION['glpiactiveprofile']['name'] === 'Super-Admin');
+
+        if ($item->getType() == 'User' && $is_superadmin) {
             return self::createTabEntry(self::getTypeName(), 0, __CLASS__, self::getIcon());
         }
         return '';
