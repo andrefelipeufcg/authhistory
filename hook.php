@@ -12,7 +12,7 @@ function plugin_authhistory_uninstall() {
 /**
  * Hook init_session: disparado pelo GLPI após autenticar o usuário com sucesso.
  *
- * 1. Lê o marcador de sessão $_SESSION['authhistory_sso_provider'] (setado pelos
+ * 1. Lê o marcador de sessão $_SERVER['AUTHHISTORY_SSO_PROVIDER'] (setado pelos
  *    plugins govbrsso / googlesso, se instalados).
  * 2. Localiza o evento de login mais recente em glpi_events.
  * 3. Atualiza o evento com:
@@ -28,9 +28,9 @@ function plugin_authhistory_init_session() {
         return;
     }
 
-    // Lê e consome o marcador SSO (se existir).
-    $sso_provider = $_SESSION['authhistory_sso_provider'] ?? null;
-    unset($_SESSION['authhistory_sso_provider']);
+    // Lê e consome o marcador SSO da variável de ambiente (sobrevive ao Session::init).
+    $sso_provider = $_SERVER['AUTHHISTORY_SSO_PROVIDER'] ?? null;
+    unset($_SERVER['AUTHHISTORY_SSO_PROVIDER']);
 
     // Determina o sufixo SSO para a message.
     $sso_suffix = '';
@@ -41,8 +41,7 @@ function plugin_authhistory_init_session() {
     }
 
     // Busca o evento de login mais recente (último ID inserido com service='login').
-    // O GLPI core insere esse evento durante Auth::login() / Session::init(),
-    // que acontece ANTES deste hook disparar.
+    // O GLPI core (ou o googlesso) insere esse evento ANTES deste hook disparar.
     $iterator = $DB->request([
         'FROM'  => 'glpi_events',
         'WHERE' => [

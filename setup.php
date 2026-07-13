@@ -7,7 +7,7 @@ function plugin_version_authhistory() {
         'version'        => AUTHHISTORY_VERSION,
         'author'         => 'andrefelipeufcg',
         'license'        => 'GPLv2+',
-        'homepage'       => '',
+        'homepage'       => 'https://github.com/andrefelipeufcg/authhistory',
         'requirements'   => [
             'glpi' => [
                 'min' => '10.0.0',
