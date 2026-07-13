@@ -1,75 +1,89 @@
 <?php
 function plugin_authhistory_install() {
-    global $DB;
-
-    $migration = new Migration(100);
-
-    if (!$DB->tableExists("glpi_plugin_authhistory_logs")) {
-        $query = "CREATE TABLE `glpi_plugin_authhistory_logs` (
-            `id` int(11) NOT NULL AUTO_INCREMENT,
-            `users_id` int(11) NOT NULL DEFAULT '0',
-            `authtype` int(11) NOT NULL DEFAULT '0',
-            `ip_address` varchar(255) DEFAULT NULL,
-            `date_creation` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-            PRIMARY KEY (`id`),
-            KEY `users_id` (`users_id`)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
-        
-        $stmt = $DB->prepare($query);
-        $DB->executeStatement($stmt);
-    }
-
-    $migration->executeMigration();
+    // Não precisa criar tabela — usa a tabela nativa glpi_events do GLPI.
     return true;
 }
 
 function plugin_authhistory_uninstall() {
-    global $DB;
-
-    $tables = [
-        "glpi_plugin_authhistory_logs"
-    ];
-
-    foreach ($tables as $table) {
-        $DB->dropTable($table);
-    }
-
+    // Não há tabela customizada para remover.
     return true;
 }
 
+/**
+ * Hook init_session: disparado pelo GLPI após autenticar o usuário com sucesso.
+ *
+ * 1. Lê o marcador de sessão $_SESSION['authhistory_sso_provider'] (setado pelos
+ *    plugins govbrsso / googlesso, se instalados).
+ * 2. Localiza o evento de login mais recente em glpi_events.
+ * 3. Atualiza o evento com:
+ *    - items_id = users_id (para filtrar por usuário na aba)
+ *    - Username na message (se ausente, como nos logins SSO)
+ *    - Provedor SSO na message (se aplicável)
+ */
 function plugin_authhistory_init_session() {
-    // Pega o ID do usuário que acabou de logar
+    global $DB;
+
     $users_id = Session::getLoginUserID();
     if (!$users_id) {
         return;
     }
-    
-    // No GLPI, a variável 'glpiauthtype' guarda o método padrão do usuário (geralmente 1 = Local), 
-    // mesmo que ele faça login por SSO. Precisamos identificar o fluxo exato:
-    $authtype = isset($_SESSION['glpiauthtype']) ? $_SESSION['glpiauthtype'] : 0;
-    $uri = $_SERVER['REQUEST_URI'] ?? '';
 
-    // Verifica se a requisição de login atual veio de um callback de SSO conhecido
-    if (strpos($uri, 'govbrsso') !== false) {
-        $authtype = 99; // ID inventado para Gov.BR
-    } elseif (strpos($uri, 'google') !== false || strpos($uri, 'oauth') !== false) {
-        $authtype = 98; // ID inventado para Google
-    } elseif (!empty($_SESSION['glpiextauth'])) {
-        // Se a sessão diz que foi auth externa, mas o ID do banco é Local, forçamos como Externo genérico
-        $authtype = Auth::EXTERNAL;
+    // Lê e consome o marcador SSO (se existir).
+    $sso_provider = $_SESSION['authhistory_sso_provider'] ?? null;
+    unset($_SESSION['authhistory_sso_provider']);
+
+    // Determina o sufixo SSO para a message.
+    $sso_suffix = '';
+    if ($sso_provider === 'govbr') {
+        $sso_suffix = ' via Gov.BR (SSO)';
+    } elseif ($sso_provider === 'google') {
+        $sso_suffix = ' via Google Workspace (SSO)';
     }
 
-    $ip_address = $_SERVER['REMOTE_ADDR'] ?? '';
-    
-    // Fallback caso a variável global de tempo do GLPI não esteja preenchida
-    $currentTime = isset($_SESSION['glpi_currenttime']) ? $_SESSION['glpi_currenttime'] : date('Y-m-d H:i:s');
+    // Busca o evento de login mais recente (último ID inserido com service='login').
+    // O GLPI core insere esse evento durante Auth::login() / Session::init(),
+    // que acontece ANTES deste hook disparar.
+    $iterator = $DB->request([
+        'FROM'  => 'glpi_events',
+        'WHERE' => [
+            'service' => 'login',
+        ],
+        'ORDER' => 'id DESC',
+        'LIMIT' => 1,
+    ]);
 
-    // Instancia nossa classe e insere o registro
-    $log = new PluginAuthhistoryLog();
-    $log->add([
-        'users_id'      => $users_id,
-        'authtype'      => $authtype,
-        'ip_address'    => $ip_address,
-        'date_creation' => $currentTime
+    if (count($iterator) === 0) {
+        return;
+    }
+
+    $event = $iterator->current();
+    $event_id = $event['id'];
+    $message  = $event['message'];
+
+    // Obtém o username do usuário logado.
+    $user = new User();
+    $username = '';
+    if ($user->getFromDB($users_id)) {
+        $username = $user->fields['name'];
+    }
+
+    // Se a message não contém o username (típico de logins SSO onde o core
+    // registra apenas "fez login no IP x.x.x.x"), prepende o username.
+    if ($username !== '' && strpos($message, $username) === false) {
+        // O core gera mensagens como " fez login no IP ..." ou "fez login no IP ..."
+        $message = $username . ' ' . ltrim($message);
+    }
+
+    // Adiciona o sufixo SSO se aplicável e se ainda não está presente.
+    if ($sso_suffix !== '' && strpos($message, $sso_suffix) === false) {
+        $message .= $sso_suffix;
+    }
+
+    // Atualiza o evento: items_id para filtrar na aba + message enriquecida.
+    $DB->update('glpi_events', [
+        'items_id' => $users_id,
+        'message'  => $message,
+    ], [
+        'id' => $event_id,
     ]);
 }

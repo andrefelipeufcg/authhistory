@@ -29,31 +29,60 @@ class PluginAuthhistoryLog extends CommonDBTM {
         return '';
     }
     
-    // Renderiza o conteúdo da aba
+    /**
+     * Renderiza o conteúdo da aba "Histórico de Acesso".
+     * Lê diretamente da tabela nativa glpi_events (service='login').
+     */
     static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0) {
         global $DB;
         $users_id = $item->getID();
+
+        // Obtém o username para buscar eventos antigos (antes do plugin setar items_id).
+        $username = '';
+        $user = new User();
+        if ($user->getFromDB($users_id)) {
+            $username = $user->fields['name'];
+        }
 
         echo "<div class='spaced'>";
         echo "<table class='tab_cadre_fixehov'>";
         echo "<tr><th>Data e Hora</th><th>IP</th><th>Método de Autenticação (Tipo)</th></tr>";
 
+        // Busca eventos de login deste usuário:
+        // - items_id = users_id (eventos enriquecidos pelo plugin)
+        // - OU message contém o username (eventos anteriores à instalação do plugin)
+        $where = [
+            'service' => 'login',
+        ];
+
+        if ($username !== '') {
+            $where[] = [
+                'OR' => [
+                    'items_id' => $users_id,
+                    'message'  => ['LIKE', $username . '%'],
+                ],
+            ];
+        } else {
+            $where['items_id'] = $users_id;
+        }
+
         $iterator = $DB->request([
-            'FROM'  => 'glpi_plugin_authhistory_logs',
-            'WHERE' => ['users_id' => $users_id],
-            'ORDER' => 'date_creation DESC',
-            'LIMIT' => 100 // Exibe os últimos 100 acessos
+            'FROM'  => 'glpi_events',
+            'WHERE' => $where,
+            'ORDER' => 'date DESC',
+            'LIMIT' => 100,
         ]);
 
         if (count($iterator)) {
             foreach ($iterator as $data) {
-                $auth_name = self::getAuthName($data['authtype']); 
+                $message = $data['message'];
+                $ip = self::extractIp($message);
+                $auth_method = self::extractAuthMethod($message);
                 
                 echo "<tr class='tab_bg_1'>";
-                echo "<td>" . Html::convDateTime($data['date_creation']) . "</td>";
-                echo "<td>" . $data['ip_address'] . "</td>";
-                // Mostra o nome amigável e também o ID para facilitar debug se for um plugin externo de SSO customizado
-                echo "<td>" . $auth_name . " (ID: " . $data['authtype'] . ")</td>";
+                echo "<td>" . Html::convDateTime($data['date']) . "</td>";
+                echo "<td>" . htmlspecialchars($ip) . "</td>";
+                echo "<td>" . htmlspecialchars($auth_method) . "</td>";
                 echo "</tr>";
             }
         } else {
@@ -64,29 +93,34 @@ class PluginAuthhistoryLog extends CommonDBTM {
         echo "</div>";
     }
 
-    // Traduz o ID do tipo de autenticação para um nome legível
-    static function getAuthName($authtype) {
-        switch ($authtype) {
-            case 99:
-                return "Gov.BR (SSO)";
-            case 98:
-                return "Google Workspace (SSO)";
-            case Auth::DB_GLPI: 
-                return "Banco de Dados Local";
-            case Auth::LDAP: 
-                return "Diretório LDAP";
-            case Auth::EXTERNAL: 
-                return "Autenticação Externa (SSO Padrão)";
-            case Auth::MAIL:
-                return "Servidor de Email (IMAP/POP)";
-            case Auth::CAS:
-                return "CAS";
-            case Auth::X509:
-                return "Certificado X509";
-            case 0:
-                return "Desconhecido/Sessão Restaurada";
-            default: 
-                return "Outro Método Customizado";
+    /**
+     * Extrai o endereço IP da message do glpi_events.
+     * Formato esperado: "... no IP 150.165.99.48 ..."
+     */
+    static function extractIp($message) {
+        if (preg_match('/no IP\s+([\d.:a-fA-F]+)/', $message, $matches)) {
+            return $matches[1];
         }
+        return '-';
+    }
+
+    /**
+     * Extrai o método de autenticação da message do glpi_events.
+     * Logins SSO enriquecidos pelo plugin contêm "via Gov.BR (SSO)" ou "via Google Workspace (SSO)".
+     * Logins com falha contêm "Login falhou".
+     * Logins locais não têm sufixo SSO.
+     */
+    static function extractAuthMethod($message) {
+        if (strpos($message, 'via Gov.BR (SSO)') !== false) {
+            return 'Gov.BR (SSO)';
+        }
+        if (strpos($message, 'via Google Workspace (SSO)') !== false) {
+            return 'Google Workspace (SSO)';
+        }
+        if (stripos($message, 'Login falhou') !== false) {
+            return 'Login Falhou';
+        }
+        return 'Banco de Dados Local';
     }
 }
+
