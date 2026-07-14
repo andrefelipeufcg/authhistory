@@ -53,6 +53,7 @@ class PluginAuthhistoryLog extends CommonDBTM {
         // - OU message contém o username (eventos anteriores à instalação do plugin)
         $where = [
             'service' => 'login',
+            'type'    => 'system',
         ];
 
         if ($username !== '') {
@@ -106,19 +107,13 @@ class PluginAuthhistoryLog extends CommonDBTM {
 
     /**
      * Extrai o método de autenticação da message do glpi_events.
-     * Logins SSO enriquecidos pelo plugin contêm "via Gov.BR (SSO)" ou "via Google Workspace (SSO)".
-     * Logins com falha contêm "Login falhou".
-     * Logins locais não têm sufixo SSO.
+     * Logins SSO enriquecidos por plugins contêm um sufixo como " via NomeDoSSO".
+     * Logins locais padrão não possuem esse sufixo.
      */
     static function extractAuthMethod($message) {
-        if (strpos($message, 'via Gov.BR (SSO)') !== false) {
-            return 'Gov.BR (SSO)';
-        }
-        if (strpos($message, 'via Google Workspace (SSO)') !== false) {
-            return 'Google Workspace (SSO)';
-        }
-        if (stripos($message, 'Login falhou') !== false) {
-            return 'Login Falhou';
+        $pos = strpos($message, ' via ');
+        if ($pos !== false) {
+            return trim(substr($message, $pos + 5));
         }
         return 'Banco de Dados Local';
     }
