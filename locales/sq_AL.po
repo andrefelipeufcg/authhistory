@@ -25,3 +25,7 @@ msgstr "Ky shtojcë kërkon GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Ky shtojcë kërkon PHP >= %s"
 
+
+msgid "via"
+msgstr "nëpërmjet"
+

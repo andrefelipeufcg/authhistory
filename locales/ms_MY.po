@@ -25,3 +25,7 @@ msgstr "Pemalam ini memerlukan GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Pemalam ini memerlukan PHP >= %s"
 
+
+msgid "via"
+msgstr "melalui"
+

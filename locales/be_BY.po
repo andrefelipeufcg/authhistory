@@ -25,3 +25,7 @@ msgstr "Гэты убудова патрабуе GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Гэты убудова патрабуе PHP >= %s"
 
+
+msgid "via"
+msgstr "праз"
+

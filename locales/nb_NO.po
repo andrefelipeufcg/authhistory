@@ -25,3 +25,7 @@ msgstr "Denne pluginen krever GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Denne pluginen krever PHP >= %s"
 
+
+msgid "via"
+msgstr "via"
+

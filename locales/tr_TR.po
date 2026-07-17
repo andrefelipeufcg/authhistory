@@ -25,3 +25,7 @@ msgstr "Bu eklenti GLPI >= %s gerektirir"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Bu eklenti PHP >= %s gerektirir"
 
+
+msgid "via"
+msgstr "aracılığıyla"
+

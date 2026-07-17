@@ -25,3 +25,7 @@ msgstr "Aquest connector requereix GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Aquest connector requereix PHP >= %s"
 
+
+msgid "via"
+msgstr "via"
+

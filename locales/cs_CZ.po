@@ -25,3 +25,7 @@ msgstr "Tento plugin vyžaduje GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Tento plugin vyžaduje PHP >= %s"
 
+
+msgid "via"
+msgstr "přes"
+

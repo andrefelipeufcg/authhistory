@@ -25,3 +25,7 @@ msgstr "Ĉi tiu kromprogramo postulas GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Ĉi tiu kromprogramo postulas PHP >= %s"
 
+
+msgid "via"
+msgstr "per"
+

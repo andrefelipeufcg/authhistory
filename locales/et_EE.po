@@ -25,3 +25,7 @@ msgstr "See pistikprogramm nõuab GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "See pistikprogramm nõuab PHP >= %s"
 
+
+msgid "via"
+msgstr "kaudu"
+

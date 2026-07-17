@@ -25,3 +25,7 @@ msgstr "Ez a bővítmény GLPI >= %s -t igényel"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Ez a bővítmény PHP >= %s -t igényel"
 
+
+msgid "via"
+msgstr "keresztül"
+

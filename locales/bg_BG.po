@@ -25,3 +25,7 @@ msgstr "Този плъгин изисква GLPI >= %s"
 msgid "Este plugin requer PHP >= %s"
 msgstr "Този плъгин изисква PHP >= %s"
 
+
+msgid "via"
+msgstr "чрез"
+
