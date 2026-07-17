@@ -34,6 +34,13 @@ class PluginAuthhistoryLog extends CommonDBTM {
      * Lê diretamente da tabela nativa glpi_events (service='login').
      */
     static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0) {
+        $is_superadmin = (isset($_SESSION['glpiactiveprofile']['id']) && $_SESSION['glpiactiveprofile']['id'] == 4) 
+                      || (isset($_SESSION['glpiactiveprofile']['name']) && $_SESSION['glpiactiveprofile']['name'] === 'Super-Admin');
+
+        if (!$is_superadmin) {
+            return false;
+        }
+
         global $DB;
         $users_id = $item->getID();
 

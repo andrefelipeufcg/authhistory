@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <name>Histórico de Autenticação</name>
+    <key>authhistory</key>
+    <state>stable</state>
+    <version>1.0.0</version>
+    <license>GPLv2+</license>
+    <homepage>https://github.com/andrefelipeufcg/authhistory</homepage>
+    <download>https://github.com/andrefelipeufcg/authhistory/releases</download>
+    <issues>https://github.com/andrefelipeufcg/authhistory/issues</issues>
+    <readme>https://github.com/andrefelipeufcg/authhistory/blob/main/README.md</readme>
+    <authors>
+        <author>andrefelipeufcg</author>
+    </authors>
+    <description>
+        <en>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</en>
+        <fr>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr>
+    </description>
+    <tags>
+        <en>
+            <tag>authentication</tag>
+            <tag>log</tag>
+            <tag>history</tag>
+        </en>
+        <fr>
+            <tag>authentification</tag>
+            <tag>journal</tag>
+            <tag>historique</tag>
+        </fr>
+    </tags>
+    <versions>
+        <version>
+            <num>1.0.0</num>
+            <compatibility>
+                <glpi>&gt;=10.0.0</glpi>
+                <php>&gt;=7.4</php>
+            </compatibility>
+        </version>
+    </versions>
+</plugin>

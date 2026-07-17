@@ -18,6 +18,10 @@ function plugin_version_authhistory() {
 }
 
 function plugin_authhistory_check_prerequisites() {
+    if (version_compare(GLPI_VERSION, '10.0.0', '<')) {
+        echo 'Este plugin requer GLPI >= 10.0.0';
+        return false;
+    }
     return true;
 }
 
