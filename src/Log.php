@@ -75,7 +75,7 @@ class Log extends CommonDBTM {
             ];
         }
 
-        TemplateRenderer::getInstance()->display('plugin_authhistory/log.html.twig', [
+        \Glpi\Application\View\TemplateRenderer::getInstance()->display('@authhistory/log.html.twig', [
             'events' => $events
         ]);
         
