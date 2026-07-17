@@ -1,5 +1,7 @@
 <?php
-define('AUTHHISTORY_VERSION', '1.0.0');
+define('AUTHHISTORY_VERSION', '1.0.2');
+define('AUTHHISTORY_GLPI_MIN', '10.0.0');
+//define('AUTHHISTORY_GLPI_MAX', '11.1.0');
 
 function plugin_version_authhistory() {
     return [
@@ -10,16 +12,20 @@ function plugin_version_authhistory() {
         'homepage'       => 'https://github.com/andrefelipeufcg/authhistory',
         'requirements'   => [
             'glpi' => [
-                'min' => '10.0.0',
-                'max' => '11.1.0' // Compatível com as versões recentes do GLPI 10 e 11
+                'min' => AUTHHISTORY_GLPI_MIN,
+                //'max' => AUTHHISTORY_GLPI_MAX
             ]
         ]
     ];
 }
 
 function plugin_authhistory_check_prerequisites() {
-    if (version_compare(GLPI_VERSION, '10.0.0', '<')) {
-        echo 'Este plugin requer GLPI >= 10.0.0';
+    if (version_compare(GLPI_VERSION, AUTHHISTORY_GLPI_MIN, '<')) {
+        echo 'Este plugin requer GLPI >= ' . AUTHHISTORY_GLPI_MIN;
+        return false;
+    }
+    if (version_compare(PHP_VERSION, '7.4.0', '<')) {
+        echo 'Este plugin requer PHP >= 7.4.0';
         return false;
     }
     return true;
@@ -38,5 +44,5 @@ function plugin_init_authhistory() {
     $PLUGIN_HOOKS['init_session']['authhistory'] = 'plugin_authhistory_init_session';
     
     // Registra a classe para adicionar uma aba no formulário de Usuário
-    Plugin::registerClass('PluginAuthhistoryLog', ['addtabon' => 'User']);
+    Plugin::registerClass('GlpiPlugin\Authhistory\Log', ['addtabon' => 'User']);
 }

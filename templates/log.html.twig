@@ -1,0 +1,22 @@
+<div class="spaced">
+    <table class="tab_cadre_fixehov">
+        <tr>
+            <th>Data e Hora</th>
+            <th>IP</th>
+            <th>Método de Autenticação (Tipo)</th>
+        </tr>
+        {% if events|length > 0 %}
+            {% for event in events %}
+                <tr class="tab_bg_1">
+                    <td>{{ event.date }}</td>
+                    <td>{{ event.ip }}</td>
+                    <td>{{ event.auth_method }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr class="tab_bg_1">
+                <td colspan="3" class="center">Nenhum registro de acesso encontrado.</td>
+            </tr>
+        {% endif %}
+    </table>
+</div>

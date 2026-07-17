@@ -3,7 +3,7 @@
     <name>Histórico de Autenticação</name>
     <key>authhistory</key>
     <state>stable</state>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <license>GPLv2+</license>
     <homepage>https://github.com/andrefelipeufcg/authhistory</homepage>
     <download>https://github.com/andrefelipeufcg/authhistory/releases</download>
@@ -12,11 +12,20 @@
     <authors>
         <author>andrefelipeufcg</author>
     </authors>
-    <description>
-        <en>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</en>
+    <description>Exibe o histórico de logins e IPs na aba do usuário no GLPI.
+        <en>Displays the history of logins and IPs in the user tab in GLPI.</en>
         <fr>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr>
+        <es>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es>
+        <pt_BR>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</pt_BR>
+        <it>Mostra la cronologia degli accessi e degli IP nella scheda utente in GLPI.</it>
+        <de>Zeigt den Anmelde- und IP-Verlauf im Benutzer-Tab in GLPI an.</de>
+        <pl>Wyświetla historię logowań i adresów IP na karcie użytkownika w GLPI.</pl>
+        <ru>Отображает историю входов и IP-адресов на вкладке пользователя в GLPI.</ru>
     </description>
     <tags>
+        <tag>authentication</tag>
+        <tag>log</tag>
+        <tag>history</tag>
         <en>
             <tag>authentication</tag>
             <tag>log</tag>
@@ -27,14 +36,61 @@
             <tag>journal</tag>
             <tag>historique</tag>
         </fr>
+        <es>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es>
+        <pt_BR>
+            <tag>autenticação</tag>
+            <tag>log</tag>
+            <tag>historico</tag>
+        </pt_BR>
+        <it>
+            <tag>autenticazione</tag>
+            <tag>registro</tag>
+            <tag>cronologia</tag>
+        </it>
+        <de>
+            <tag>authentifizierung</tag>
+            <tag>protokoll</tag>
+            <tag>verlauf</tag>
+        </de>
+        <pl>
+            <tag>uwierzytelnianie</tag>
+            <tag>dziennik</tag>
+            <tag>historia</tag>
+        </pl>
+        <ru>
+            <tag>аутентификация</tag>
+            <tag>журнал</tag>
+            <tag>история</tag>
+        </ru>
     </tags>
     <versions>
+        <version>
+            <num>1.0.2</num>
+            <compatibility>
+                <glpi>&gt;=10.0.0</glpi>
+                <php>&gt;=7.4</php>
+            </compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.2.zip</download_url>
+        </version>
+        <version>
+            <num>1.0.1</num>
+            <compatibility>
+                <glpi>&gt;=10.0.0</glpi>
+                <php>&gt;=7.4</php>
+            </compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.1.zip</download_url>
+        </version>
         <version>
             <num>1.0.0</num>
             <compatibility>
                 <glpi>&gt;=10.0.0</glpi>
                 <php>&gt;=7.4</php>
             </compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.0.zip</download_url>
         </version>
     </versions>
 </plugin>
