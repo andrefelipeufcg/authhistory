@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Erişim Geçmişi"
+
+msgid "Banco de Dados Local"
+msgstr "Yerel Veritabanı"
+
+msgid "Data e Hora"
+msgstr "Tarih ve Saat"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Kimlik Doğrulama Yöntemi (Tür)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Erişim kaydı bulunamadı."
+
+msgid "Histórico de Autenticação"
+msgstr "Kimlik Doğrulama Geçmişi"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Bu eklenti GLPI >= %s gerektirir"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Bu eklenti PHP >= %s gerektirir"
+

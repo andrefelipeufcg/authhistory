@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Historial d'accés"
+
+msgid "Banco de Dados Local"
+msgstr "Base de dades local"
+
+msgid "Data e Hora"
+msgstr "Data i hora"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Mètode d'autenticació (Tipus)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "No s'ha trobat cap registre d'accés."
+
+msgid "Histórico de Autenticação"
+msgstr "Historial d'autenticació"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Aquest connector requereix GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Aquest connector requereix PHP >= %s"
+

@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Sejarah Akses"
+
+msgid "Banco de Dados Local"
+msgstr "Pangkalan Data Tempatan"
+
+msgid "Data e Hora"
+msgstr "Tarikh dan Masa"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Kaedah Pengesahan (Jenis)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Tiada rekod akses dijumpai."
+
+msgid "Histórico de Autenticação"
+msgstr "Sejarah Pengesahan"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Pemalam ini memerlukan GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Pemalam ini memerlukan PHP >= %s"
+

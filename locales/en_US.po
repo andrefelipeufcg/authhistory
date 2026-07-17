@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Access History"
+
+msgid "Banco de Dados Local"
+msgstr "Local Database"
+
+msgid "Data e Hora"
+msgstr "Date and Time"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Authentication Method (Type)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "No access record found."
+
+msgid "Histórico de Autenticação"
+msgstr "Authentication History"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "This plugin requires GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "This plugin requires PHP >= %s"
+

@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Ιστορικό πρόσβασης"
+
+msgid "Banco de Dados Local"
+msgstr "Τοπική βάση δεδομένων"
+
+msgid "Data e Hora"
+msgstr "Ημερομηνία και ώρα"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Μέθοδος ελέγχου ταυτότητας (Τύπος)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Δεν βρέθηκε εγγραφή πρόσβασης."
+
+msgid "Histórico de Autenticação"
+msgstr "Ιστορικό ελέγχου ταυτότητας"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Αυτό το πρόσθετο απαιτεί GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Αυτό το πρόσθετο απαιτεί PHP >= %s"
+

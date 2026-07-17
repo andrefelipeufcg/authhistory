@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Хандалтын түүх"
+
+msgid "Banco de Dados Local"
+msgstr "Орон нутгийн мэдээллийн сан"
+
+msgid "Data e Hora"
+msgstr "Огноо, цаг"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Баталгаажуулах арга (Төрөл)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Хандалтын бүртгэл олдсонгүй."
+
+msgid "Histórico de Autenticação"
+msgstr "Баталгаажуулалтын түүх"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Энэ залгаас нь GLPI >= %s шаарддаг"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Энэ залгаас нь PHP >= %s шаарддаг"
+

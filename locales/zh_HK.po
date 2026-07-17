@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "存取歷史"
+
+msgid "Banco de Dados Local"
+msgstr "本地資料庫"
+
+msgid "Data e Hora"
+msgstr "日期和時間"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "身分驗證方法 (類型)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "未找到存取記錄。"
+
+msgid "Histórico de Autenticação"
+msgstr "身分驗證歷史"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "此外掛程式需要 GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "此外掛程式需要 PHP >= %s"
+

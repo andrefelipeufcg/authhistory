@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "ប្រវត្តិការចូលប្រើ"
+
+msgid "Banco de Dados Local"
+msgstr "មូលដ្ឋានទិន្នន័យមូលដ្ឋាន"
+
+msgid "Data e Hora"
+msgstr "កាលបរិច្ឆេទ និង ពេលវេលា"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "វិធីសាស្ត្រផ្ទៀងផ្ទាត់ (ប្រភេទ)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "រកមិនឃើញកំណត់ត្រាចូលប្រើទេ។"
+
+msgid "Histórico de Autenticação"
+msgstr "ប្រវត្តិផ្ទៀងផ្ទាត់"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "កម្មវិធីជំនួយនេះទាមទារ GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "កម្មវិធីជំនួយនេះទាមទារ PHP >= %s"
+

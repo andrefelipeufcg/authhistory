@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "ಪ್ರವೇಶ ಇತಿಹಾಸ"
+
+msgid "Banco de Dados Local"
+msgstr "ಸ್ಥಳೀಯ ಡೇಟಾಬೇಸ್"
+
+msgid "Data e Hora"
+msgstr "ದಿನಾಂಕ ಮತ್ತು ಸಮಯ"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "ದೃಢೀಕರಣ ವಿಧಾನ (ಪ್ರಕಾರ)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "ಯಾವುದೇ ಪ್ರವೇಶ ದಾಖಲೆ ಕಂಡುಬಂದಿಲ್ಲ."
+
+msgid "Histórico de Autenticação"
+msgstr "ದೃಢೀಕರಣ ಇತಿಹಾಸ"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "ಈ ಪ್ಲಗಿನ್‌ಗೆ GLPI >= %s ಅಗತ್ಯವಿದೆ"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "ಈ ಪ್ಲಗಿನ್‌ಗೆ PHP >= %s ಅಗತ್ಯವಿದೆ"
+

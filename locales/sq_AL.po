@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Historia e aksesit"
+
+msgid "Banco de Dados Local"
+msgstr "Baza e të dhënave lokale"
+
+msgid "Data e Hora"
+msgstr "Data dhe ora"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Metoda e vërtetimit (Lloji)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Nuk u gjet asnjë rekord aksesi."
+
+msgid "Histórico de Autenticação"
+msgstr "Historia e vërtetimit"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Ky shtojcë kërkon GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Ky shtojcë kërkon PHP >= %s"
+

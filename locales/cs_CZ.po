@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Historie přístupu"
+
+msgid "Banco de Dados Local"
+msgstr "Místní databáze"
+
+msgid "Data e Hora"
+msgstr "Datum a čas"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Metoda ověření (Typ)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Nebyl nalezen žádný záznam o přístupu."
+
+msgid "Histórico de Autenticação"
+msgstr "Historie ověřování"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Tento plugin vyžaduje GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Tento plugin vyžaduje PHP >= %s"
+

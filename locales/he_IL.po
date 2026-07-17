@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "היסטוריית גישה"
+
+msgid "Banco de Dados Local"
+msgstr "מסד נתונים מקומי"
+
+msgid "Data e Hora"
+msgstr "תאריך ושעה"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "שיטת אימות (סוג)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "לא נמצאה רשומת גישה."
+
+msgid "Histórico de Autenticação"
+msgstr "היסטוריית אימות"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "תוסף זה דורש GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "תוסף זה דורש PHP >= %s"
+

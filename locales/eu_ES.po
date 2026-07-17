@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Sarbide-historia"
+
+msgid "Banco de Dados Local"
+msgstr "Datu-base lokala"
+
+msgid "Data e Hora"
+msgstr "Data eta ordua"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Autentifikazio metodoa (Mota)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Ez da sarbide-erregistrorik aurkitu."
+
+msgid "Histórico de Autenticação"
+msgstr "Autentifikazio-historia"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Plugin honek GLPI >= %s behar du"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Plugin honek PHP >= %s behar du"
+

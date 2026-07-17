@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Historia dostępu"
+
+msgid "Banco de Dados Local"
+msgstr "Lokalna baza danych"
+
+msgid "Data e Hora"
+msgstr "Data i godzina"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Metoda uwierzytelniania (Typ)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Nie znaleziono rekordu dostępu."
+
+msgid "Histórico de Autenticação"
+msgstr "Historia uwierzytelniania"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Ta wtyczka wymaga GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Ta wtyczka wymaga PHP >= %s"
+

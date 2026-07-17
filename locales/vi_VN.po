@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Lịch sử truy cập"
+
+msgid "Banco de Dados Local"
+msgstr "Cơ sở dữ liệu cục bộ"
+
+msgid "Data e Hora"
+msgstr "Ngày và giờ"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Phương thức xác thực (Loại)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Không tìm thấy bản ghi truy cập nào."
+
+msgid "Histórico de Autenticação"
+msgstr "Lịch sử xác thực"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Plugin này yêu cầu GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Plugin này yêu cầu PHP >= %s"
+

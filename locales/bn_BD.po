@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "অ্যাক্সেস ইতিহাস"
+
+msgid "Banco de Dados Local"
+msgstr "স্থানীয় ডেটাবেস"
+
+msgid "Data e Hora"
+msgstr "তারিখ এবং সময়"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "প্রমাণীকরণ পদ্ধতি (প্রকার)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "কোন অ্যাক্সেস রেকর্ড পাওয়া যায়নি।"
+
+msgid "Histórico de Autenticação"
+msgstr "প্রমাণীকরণ ইতিহাস"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "এই প্লাগিনের জন্য GLPI >= %s প্রয়োজন"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "এই প্লাগিনের জন্য PHP >= %s প্রয়োজন"
+

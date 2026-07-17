@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "アクセス履歴"
+
+msgid "Banco de Dados Local"
+msgstr "ローカルデータベース"
+
+msgid "Data e Hora"
+msgstr "日時"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "認証方法（種類）"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "アクセス記録が見つかりません。"
+
+msgid "Histórico de Autenticação"
+msgstr "認証履歴"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "このプラグインには GLPI >= %s が必要です"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "このプラグインには PHP >= %s が必要です"
+

@@ -1,9 +1,9 @@
 <div class="spaced">
     <table class="tab_cadre_fixehov">
         <tr>
-            <th>Data e Hora</th>
-            <th>IP</th>
-            <th>Método de Autenticação (Tipo)</th>
+            <th>{{ __('Data e Hora', 'authhistory') }}</th>
+            <th>{{ __('IP', 'authhistory') }}</th>
+            <th>{{ __('Método de Autenticação (Tipo)', 'authhistory') }}</th>
         </tr>
         {% if events|length > 0 %}
             {% for event in events %}
@@ -15,7 +15,7 @@
             {% endfor %}
         {% else %}
             <tr class="tab_bg_1">
-                <td colspan="3" class="center">Nenhum registro de acesso encontrado.</td>
+                <td colspan="3" class="center">{{ __('Nenhum registro de acesso encontrado.', 'authhistory') }}</td>
             </tr>
         {% endif %}
     </table>

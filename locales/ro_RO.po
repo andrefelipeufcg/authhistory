@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Istoric acces"
+
+msgid "Banco de Dados Local"
+msgstr "Bază de date locală"
+
+msgid "Data e Hora"
+msgstr "Data și ora"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Metodă de autentificare (Tip)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Nicio înregistrare de acces găsită."
+
+msgid "Histórico de Autenticação"
+msgstr "Istoric autentificare"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Acest modul necesită GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Acest modul necesită PHP >= %s"
+

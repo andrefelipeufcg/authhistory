@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Juurdepääsu ajalugu"
+
+msgid "Banco de Dados Local"
+msgstr "Kohalik andmebaas"
+
+msgid "Data e Hora"
+msgstr "Kuupäev ja kellaaeg"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Autentimismeetod (Tüüp)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Juurdepääsu kirjet ei leitud."
+
+msgid "Histórico de Autenticação"
+msgstr "Autentimise ajalugu"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "See pistikprogramm nõuab GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "See pistikprogramm nõuab PHP >= %s"
+

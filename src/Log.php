@@ -14,7 +14,7 @@ class Log extends CommonDBTM {
     static $rightname = 'user';
 
     static function getTypeName($nb = 0) {
-        return 'Histórico de Acesso';
+        return __('Histórico de Acesso', 'authhistory');
     }
 
     static function getIcon() {
@@ -94,6 +94,6 @@ class Log extends CommonDBTM {
         if ($pos !== false) {
             return trim(substr($message, $pos + 5));
         }
-        return 'Banco de Dados Local';
+        return __('Banco de Dados Local', 'authhistory');
     }
 }

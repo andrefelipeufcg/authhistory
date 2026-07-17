@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "ประวัติการเข้าถึง"
+
+msgid "Banco de Dados Local"
+msgstr "ฐานข้อมูลภายใน"
+
+msgid "Data e Hora"
+msgstr "วันที่และเวลา"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "วิธีการรับรองความถูกต้อง (ประเภท)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "ไม่พบบันทึกการเข้าถึง"
+
+msgid "Histórico de Autenticação"
+msgstr "ประวัติการรับรองความถูกต้อง"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "ปลั๊กอินนี้ต้องการ GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "ปลั๊กอินนี้ต้องการ PHP >= %s"
+

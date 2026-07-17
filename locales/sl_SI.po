@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Zgodovina dostopov"
+
+msgid "Banco de Dados Local"
+msgstr "Lokalna baza podatkov"
+
+msgid "Data e Hora"
+msgstr "Datum in čas"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Metoda preverjanja pristnosti (Vrsta)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Zapis o dostopu ni bil najden."
+
+msgid "Histórico de Autenticação"
+msgstr "Zgodovina preverjanja pristnosti"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Ta vtičnik zahteva GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Ta vtičnik zahteva PHP >= %s"
+

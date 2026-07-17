@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Історія доступу"
+
+msgid "Banco de Dados Local"
+msgstr "Локальна база даних"
+
+msgid "Data e Hora"
+msgstr "Дата та час"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Метод автентифікації (Тип)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Записів про доступ не знайдено."
+
+msgid "Histórico de Autenticação"
+msgstr "Історія автентифікації"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Цей плагін вимагає GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Цей плагін вимагає PHP >= %s"
+

@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Piekļuves vēsture"
+
+msgid "Banco de Dados Local"
+msgstr "Vietējā datu bāze"
+
+msgid "Data e Hora"
+msgstr "Datums un laiks"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Autentifikācijas metode (Tips)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Nav atrasts neviens piekļuves ieraksts."
+
+msgid "Histórico de Autenticação"
+msgstr "Autentifikācijas vēsture"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Šim spraudnim nepieciešams GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Šim spraudnim nepieciešams PHP >= %s"
+

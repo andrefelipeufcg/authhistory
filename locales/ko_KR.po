@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "접근 기록"
+
+msgid "Banco de Dados Local"
+msgstr "로컬 데이터베이스"
+
+msgid "Data e Hora"
+msgstr "날짜 및 시간"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "인증 방법 (유형)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "접근 기록을 찾을 수 없습니다."
+
+msgid "Histórico de Autenticação"
+msgstr "인증 기록"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "이 플러그인은 GLPI >= %s 가 필요합니다"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "이 플러그인은 PHP >= %s 가 필요합니다"
+

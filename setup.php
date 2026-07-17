@@ -5,7 +5,7 @@ define('AUTHHISTORY_GLPI_MIN', '10.0.0');
 
 function plugin_version_authhistory() {
     return [
-        'name'           => 'Histórico de Autenticação',
+        'name'           => __('Histórico de Autenticação', 'authhistory'),
         'version'        => AUTHHISTORY_VERSION,
         'author'         => 'andrefelipeufcg',
         'license'        => 'GPLv2+',
@@ -21,11 +21,11 @@ function plugin_version_authhistory() {
 
 function plugin_authhistory_check_prerequisites() {
     if (version_compare(GLPI_VERSION, AUTHHISTORY_GLPI_MIN, '<')) {
-        echo 'Este plugin requer GLPI >= ' . AUTHHISTORY_GLPI_MIN;
+        echo sprintf(__('Este plugin requer GLPI >= %s', 'authhistory'), AUTHHISTORY_GLPI_MIN);
         return false;
     }
     if (version_compare(PHP_VERSION, '7.4.0', '<')) {
-        echo 'Este plugin requer PHP >= 7.4.0';
+        echo sprintf(__('Este plugin requer PHP >= %s', 'authhistory'), '7.4.0');
         return false;
     }
     return true;

@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Alira historio"
+
+msgid "Banco de Dados Local"
+msgstr "Loka datumbazo"
+
+msgid "Data e Hora"
+msgstr "Dato kaj horo"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Aŭtentikiga metodo (Tipo)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Neniu alira rikordo trovita."
+
+msgid "Histórico de Autenticação"
+msgstr "Aŭtentikiga historio"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Ĉi tiu kromprogramo postulas GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Ĉi tiu kromprogramo postulas PHP >= %s"
+

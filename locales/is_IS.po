@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Aðgangssaga"
+
+msgid "Banco de Dados Local"
+msgstr "Staðbundinn gagnagrunnur"
+
+msgid "Data e Hora"
+msgstr "Dagsetning og tími"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Auðkenningaraðferð (Tegund)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Engin aðgangsskrá fannst."
+
+msgid "Histórico de Autenticação"
+msgstr "Auðkenningarsaga"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Þessi viðbót krefst GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Þessi viðbót krefst PHP >= %s"
+

@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Hozzáférési előzmények"
+
+msgid "Banco de Dados Local"
+msgstr "Helyi adatbázis"
+
+msgid "Data e Hora"
+msgstr "Dátum és idő"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Hitelesítési módszer (Típus)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Nem található hozzáférési rekord."
+
+msgid "Histórico de Autenticação"
+msgstr "Hitelesítési előzmények"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Ez a bővítmény GLPI >= %s -t igényel"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Ez a bővítmény PHP >= %s -t igényel"
+

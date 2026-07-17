@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Pääsyhistoria"
+
+msgid "Banco de Dados Local"
+msgstr "Paikallinen tietokanta"
+
+msgid "Data e Hora"
+msgstr "Päivämäärä ja aika"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Todennusmenetelmä (Tyyppi)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Pääsytietuetta ei löytynyt."
+
+msgid "Histórico de Autenticação"
+msgstr "Todennushistoria"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Tämä liitännäinen vaatii GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Tämä liitännäinen vaatii PHP >= %s"
+

@@ -1,0 +1,27 @@
+msgid "Histórico de Acesso"
+msgstr "Åtkomsthistorik"
+
+msgid "Banco de Dados Local"
+msgstr "Lokal databas"
+
+msgid "Data e Hora"
+msgstr "Datum och tid"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Método de Autenticação (Tipo)"
+msgstr "Autentiseringsmetod (Typ)"
+
+msgid "Nenhum registro de acesso encontrado."
+msgstr "Ingen åtkomstpost hittades."
+
+msgid "Histórico de Autenticação"
+msgstr "Autentiseringshistorik"
+
+msgid "Este plugin requer GLPI >= %s"
+msgstr "Denna plugin kräver GLPI >= %s"
+
+msgid "Este plugin requer PHP >= %s"
+msgstr "Denna plugin kräver PHP >= %s"
+
