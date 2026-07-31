@@ -1,96 +1,594 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin>
-    <name>Histórico de Autenticação</name>
+<root>
+    <name>Auth History</name>
     <key>authhistory</key>
     <state>stable</state>
-    <version>1.0.2</version>
-    <license>GPLv2+</license>
+    <logo>https://raw.githubusercontent.com/andrefelipeufcg/authhistory/main/logo.png</logo>
+    <description>
+        <short>
+            <en>Displays the history of logins and IPs in the user tab in GLPI.</en>
+            <ar_IQ>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_IQ>
+            <ar_SA>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SA>
+            <ar_SY>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SY>
+            <az_AZ>GLPI-də istifadəçi tabında girişlərin və IP ünvanların tarixçəsini göstərir.</az_AZ>
+            <be_BY>Адлюстроўвае гісторыю ўваходаў і IP-адрасоў на ўкладцы карыстальніка ў GLPI.</be_BY>
+            <bg_BG>Показва историята на влизанията и IP адресите в раздела на потребителя в GLPI.</bg_BG>
+            <bn_BD>GLPI-তে ব্যবহারকারী ট্যাবে লগইন এবং আইপিগুলির ইতিহাস প্রদর্শন করে।</bn_BD>
+            <ca_ES>Mostra l'historial d'inicis de sessió i adreces IP a la pestanya de l'usuari a GLPI.</ca_ES>
+            <cs_CZ>Zobrazuje historii přihlášení a IP adres na kartě uživatele v GLPI.</cs_CZ>
+            <da_DK>Viser historikken for logins og IP-adresser under brugerfanen i GLPI.</da_DK>
+            <de_DE>Zeigt den Anmelde- und IP-Verlauf im Benutzer-Tab in GLPI an.</de_DE>
+            <el_GR>Εμφανίζει το ιστορικό συνδέσεων και τις διευθύνσεις IP στην καρτέλα χρήστη στο GLPI.</el_GR>
+            <en_GB>Displays the history of logins and IPs in the user tab in GLPI.</en_GB>
+            <en_US>Displays the history of logins and IPs in the user tab in GLPI.</en_US>
+            <eo>Montras la historion de ensalutoj kaj IP-adresoj en la langeto de uzanto en GLPI.</eo>
+            <es_419>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_419>
+            <es_AR>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_AR>
+            <es_CL>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_CL>
+            <es_CO>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_CO>
+            <es_EC>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_EC>
+            <es_ES>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_ES>
+            <es_MX>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_MX>
+            <es_VE>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_VE>
+            <et_EE>Kuvab GLPI kasutaja vahekaardil sisselogimiste ja IP-aadresside ajaloo.</et_EE>
+            <eu_ES>Saio-hasieren eta IP helbideen historia erakusten du GLPIren erabiltzaile-fitxan.</eu_ES>
+            <fa_IR>تاریخچه ورودها و آدرس‌های IP را در تب کاربر در GLPI نمایش می‌دهد.</fa_IR>
+            <fi_FI>Näyttää kirjautumisten ja IP-osoitteiden historian GLPI:n käyttäjävälilehdellä.</fi_FI>
+            <fr_BE>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr_BE>
+            <fr_CA>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr_CA>
+            <fr_FR>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr_FR>
+            <gl_ES>Mostra o historial de inicios de sesión e IPs na pestana do usuario en GLPI.</gl_ES>
+            <he_IL>מציג את היסטוריית הכניסות וכתובות ה-IP בכרטיסיית המשתמש ב-GLPI.</he_IL>
+            <hi_IN>GLPI में उपयोगकर्ता टैब में लॉगिन और IP का इतिहास प्रदर्शित करता है।</hi_IN>
+            <hr_HR>Prikazuje povijest prijava i IP adresa na kartici korisnika u GLPI-ju.</hr_HR>
+            <hu_HU>Megjeleníti a bejelentkezések és az IP-címek előzményeit a GLPI felhasználói lapján.</hu_HU>
+            <id_ID>Menampilkan riwayat login dan IP di tab pengguna di GLPI.</id_ID>
+            <is_IS>Sýnir sögu innskráninga og IP-talna á notanda flipanum í GLPI.</is_IS>
+            <it_IT>Mostra la cronologia degli accessi e degli IP nella scheda utente in GLPI.</it_IT>
+            <ja_JP>GLPIのユーザータブにログインとIPの履歴を表示します。</ja_JP>
+            <km_KH>បង្ហាញប្រវត្តិការចូល និង IP នៅក្នុងផ្ទាំងអ្នកប្រើប្រាស់នៅក្នុង GLPI។</km_KH>
+            <kn>GLPI ನಲ್ಲಿ ಬಳಕೆದಾರ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ಲಾಗಿನ್‌ಗಳು ಮತ್ತು IP ಗಳ ಇತಿಹಾಸವನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ.</kn>
+            <ko_KR>GLPI의 사용자 탭에 로그인 및 IP 기록을 표시합니다.</ko_KR>
+            <lt_LT>Rodo prisijungimų ir IP adresų istoriją naudotojo skirtuke GLPI.</lt_LT>
+            <lv_LV>Parāda pieteikšanās un IP adrešu vēsturi lietotāja cilnē GLPI.</lv_LV>
+            <mn_MN>GLPI дахь хэрэглэгчийн таб дээр нэвтрэх болон IP хаягийн түүхийг харуулна.</mn_MN>
+            <ms_MY>Memaparkan sejarah log masuk dan IP pada tab pengguna dalam GLPI.</ms_MY>
+            <nb_NO>Viser historikken for innlogginger og IP-adresser i brukerfanen i GLPI.</nb_NO>
+            <nl_BE>Toont de geschiedenis van aanmeldingen en IP-adressen in het gebruikerstabblad in GLPI.</nl_BE>
+            <nl_NL>Toont de geschiedenis van aanmeldingen en IP-adressen in het gebruikerstabblad in GLPI.</nl_NL>
+            <nn_NO>Viser historikken for innlogginger og IP-adresser i brukerfanen i GLPI.</nn_NO>
+            <pl_PL>Wyświetla historię logowań i adresów IP na karcie użytkownika w GLPI.</pl_PL>
+            <pt_BR>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</pt_BR>
+            <pt_PT>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</pt_PT>
+            <ro_RO>Afișează istoricul autentificărilor și adreselor IP în fila utilizatorului din GLPI.</ro_RO>
+            <ru_RU>Отображает историю входов и IP-адресов на вкладке пользователя в GLPI.</ru_RU>
+            <sk_SK>Zobrazuje históriu prihlásení a IP adries na karte používateľa v GLPI.</sk_SK>
+            <sl_SI>Prikazuje zgodovino prijav in IP naslovov na zavihku uporabnika v GLPI.</sl_SI>
+            <sq_AL>Shfaq historikun e hyrjeve dhe adresave IP në skedën e përdoruesit në GLPI.</sq_AL>
+            <sr_RS>Prikazuje istoriju prijava i IP adresa na kartici korisnika u GLPI-ju.</sr_RS>
+            <sv_SE>Visar historiken över inloggningar och IP-adresser på användarfliken i GLPI.</sv_SE>
+            <th_TH>แสดงประวัติการเข้าสู่ระบบและ IP ในแท็บผู้ใช้ใน GLPI</th_TH>
+            <tr_TR>GLPI'deki kullanıcı sekmesinde girişlerin ve IP'lerin geçmişini görüntüler.</tr_TR>
+            <uk_UA>Відображає історію входів та IP-адрес на вкладці користувача у GLPI.</uk_UA>
+            <vi_VN>Hiển thị lịch sử đăng nhập và IP trong tab người dùng trong GLPI.</vi_VN>
+            <zh_CN>在GLPI的用户选项卡中显示登录和IP的历史记录。</zh_CN>
+            <zh_HK>在GLPI的使用者分頁中顯示登入和IP的歷史記錄。</zh_HK>
+            <zh_TW>在GLPI的使用者分頁中顯示登入和IP的歷史記錄。</zh_TW>
+        </short>
+        <long>
+            <en>Displays the history of logins and IPs in the user tab in GLPI.</en>
+            <ar_IQ>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_IQ>
+            <ar_SA>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SA>
+            <ar_SY>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SY>
+            <az_AZ>GLPI-də istifadəçi tabında girişlərin və IP ünvanların tarixçəsini göstərir.</az_AZ>
+            <be_BY>Адлюстроўвае гісторыю ўваходаў і IP-адрасоў на ўкладцы карыстальніка ў GLPI.</be_BY>
+            <bg_BG>Показва историята на влизанията и IP адресите в раздела на потребителя в GLPI.</bg_BG>
+            <bn_BD>GLPI-তে ব্যবহারকারী ট্যাবে লগইন এবং আইপিগুলির ইতিহাস প্রদর্শন করে।</bn_BD>
+            <ca_ES>Mostra l'historial d'inicis de sessió i adreces IP a la pestanya de l'usuari a GLPI.</ca_ES>
+            <cs_CZ>Zobrazuje historii přihlášení a IP adres na kartě uživatele v GLPI.</cs_CZ>
+            <da_DK>Viser historikken for logins og IP-adresser under brugerfanen i GLPI.</da_DK>
+            <de_DE>Zeigt den Anmelde- und IP-Verlauf im Benutzer-Tab in GLPI an.</de_DE>
+            <el_GR>Εμφανίζει το ιστορικό συνδέσεων και τις διευθύνσεις IP στην καρτέλα χρήστη στο GLPI.</el_GR>
+            <en_GB>Displays the history of logins and IPs in the user tab in GLPI.</en_GB>
+            <en_US>Displays the history of logins and IPs in the user tab in GLPI.</en_US>
+            <eo>Montras la historion de ensalutoj kaj IP-adresoj en la langeto de uzanto en GLPI.</eo>
+            <es_419>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_419>
+            <es_AR>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_AR>
+            <es_CL>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_CL>
+            <es_CO>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_CO>
+            <es_EC>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_EC>
+            <es_ES>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_ES>
+            <es_MX>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_MX>
+            <es_VE>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es_VE>
+            <et_EE>Kuvab GLPI kasutaja vahekaardil sisselogimiste ja IP-aadresside ajaloo.</et_EE>
+            <eu_ES>Saio-hasieren eta IP helbideen historia erakusten du GLPIren erabiltzaile-fitxan.</eu_ES>
+            <fa_IR>تاریخچه ورودها و آدرس‌های IP را در تب کاربر در GLPI نمایش می‌دهد.</fa_IR>
+            <fi_FI>Näyttää kirjautumisten ja IP-osoitteiden historian GLPI:n käyttäjävälilehdellä.</fi_FI>
+            <fr_BE>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr_BE>
+            <fr_CA>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr_CA>
+            <fr_FR>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr_FR>
+            <gl_ES>Mostra o historial de inicios de sesión e IPs na pestana do usuario en GLPI.</gl_ES>
+            <he_IL>מציג את היסטוריית הכניסות וכתובות ה-IP בכרטיסיית המשתמש ב-GLPI.</he_IL>
+            <hi_IN>GLPI में उपयोगकर्ता टैब में लॉगिन और IP का इतिहास प्रदर्शित करता है।</hi_IN>
+            <hr_HR>Prikazuje povijest prijava i IP adresa na kartici korisnika u GLPI-ju.</hr_HR>
+            <hu_HU>Megjeleníti a bejelentkezések és az IP-címek előzményeit a GLPI felhasználói lapján.</hu_HU>
+            <id_ID>Menampilkan riwayat login dan IP di tab pengguna di GLPI.</id_ID>
+            <is_IS>Sýnir sögu innskráninga og IP-talna á notanda flipanum í GLPI.</is_IS>
+            <it_IT>Mostra la cronologia degli accessi e degli IP nella scheda utente in GLPI.</it_IT>
+            <ja_JP>GLPIのユーザータブにログインとIPの履歴を表示します。</ja_JP>
+            <km_KH>បង្ហាញប្រវត្តិការចូល និង IP នៅក្នុងផ្ទាំងអ្នកប្រើប្រាស់នៅក្នុង GLPI។</km_KH>
+            <kn>GLPI ನಲ್ಲಿ ಬಳಕೆದಾರ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ಲಾಗಿನ್‌ಗಳು ಮತ್ತು IP ಗಳ ಇತಿಹಾಸವನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ.</kn>
+            <ko_KR>GLPI의 사용자 탭에 로그인 및 IP 기록을 표시합니다.</ko_KR>
+            <lt_LT>Rodo prisijungimų ir IP adresų istoriją naudotojo skirtuke GLPI.</lt_LT>
+            <lv_LV>Parāda pieteikšanās un IP adrešu vēsturi lietotāja cilnē GLPI.</lv_LV>
+            <mn_MN>GLPI дахь хэрэглэгчийн таб дээр нэвтрэх болон IP хаягийн түүхийг харуулна.</mn_MN>
+            <ms_MY>Memaparkan sejarah log masuk dan IP pada tab pengguna dalam GLPI.</ms_MY>
+            <nb_NO>Viser historikken for innlogginger og IP-adresser i brukerfanen i GLPI.</nb_NO>
+            <nl_BE>Toont de geschiedenis van aanmeldingen en IP-adressen in het gebruikerstabblad in GLPI.</nl_BE>
+            <nl_NL>Toont de geschiedenis van aanmeldingen en IP-adressen in het gebruikerstabblad in GLPI.</nl_NL>
+            <nn_NO>Viser historikken for innlogginger og IP-adresser i brukerfanen i GLPI.</nn_NO>
+            <pl_PL>Wyświetla historię logowań i adresów IP na karcie użytkownika w GLPI.</pl_PL>
+            <pt_BR>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</pt_BR>
+            <pt_PT>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</pt_PT>
+            <ro_RO>Afișează istoricul autentificărilor și adreselor IP în fila utilizatorului din GLPI.</ro_RO>
+            <ru_RU>Отображает историю входов и IP-адресов на вкладке пользователя в GLPI.</ru_RU>
+            <sk_SK>Zobrazuje históriu prihlásení a IP adries na karte používateľa v GLPI.</sk_SK>
+            <sl_SI>Prikazuje zgodovino prijav in IP naslovov na zavihku uporabnika v GLPI.</sl_SI>
+            <sq_AL>Shfaq historikun e hyrjeve dhe adresave IP në skedën e përdoruesit në GLPI.</sq_AL>
+            <sr_RS>Prikazuje istoriju prijava i IP adresa na kartici korisnika u GLPI-ju.</sr_RS>
+            <sv_SE>Visar historiken över inloggningar och IP-adresser på användarfliken i GLPI.</sv_SE>
+            <th_TH>แสดงประวัติการเข้าสู่ระบบและ IP ในแท็บผู้ใช้ใน GLPI</th_TH>
+            <tr_TR>GLPI'deki kullanıcı sekmesinde girişlerin ve IP'lerin geçmişini görüntüler.</tr_TR>
+            <uk_UA>Відображає історію входів та IP-адрес на вкладці користувача у GLPI.</uk_UA>
+            <vi_VN>Hiển thị lịch sử đăng nhập và IP trong tab người dùng trong GLPI.</vi_VN>
+            <zh_CN>在GLPI的用户选项卡中显示登录和IP的历史记录。</zh_CN>
+            <zh_HK>在GLPI的使用者分頁中顯示登入和IP的歷史記錄。</zh_HK>
+            <zh_TW>在GLPI的使用者分頁中顯示登入和IP的歷史記錄。</zh_TW>
+        </long>
+    </description>
     <homepage>https://github.com/andrefelipeufcg/authhistory</homepage>
     <download>https://github.com/andrefelipeufcg/authhistory/releases</download>
     <issues>https://github.com/andrefelipeufcg/authhistory/issues</issues>
     <readme>https://github.com/andrefelipeufcg/authhistory/blob/main/README.md</readme>
+    <changelog>https://github.com/andrefelipeufcg/authhistory/releases</changelog>
     <authors>
         <author>andrefelipeufcg</author>
     </authors>
-    <description>Exibe o histórico de logins e IPs na aba do usuário no GLPI.
-        <en>Displays the history of logins and IPs in the user tab in GLPI.</en>
-        <fr>Affiche l'historique de connexion et les adresses IP dans l'onglet utilisateur de GLPI.</fr>
-        <es>Muestra el historial de inicios de sesión e IPs en la pestaña del usuario en GLPI.</es>
-        <pt_BR>Exibe o histórico de logins e IPs na aba do usuário no GLPI.</pt_BR>
-        <it>Mostra la cronologia degli accessi e degli IP nella scheda utente in GLPI.</it>
-        <de>Zeigt den Anmelde- und IP-Verlauf im Benutzer-Tab in GLPI an.</de>
-        <pl>Wyświetla historię logowań i adresów IP na karcie użytkownika w GLPI.</pl>
-        <ru>Отображает историю входов и IP-адресов на вкладке пользователя в GLPI.</ru>
-    </description>
+    <versions>
+        <version>
+            <num>1.0.3</num>
+            <compatibility>&gt;=10.0.0</compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.3.zip</download_url>
+        </version>
+        <version>
+            <num>1.0.2</num>
+            <compatibility>&gt;=10.0.0</compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.2.zip</download_url>
+        </version>
+        <version>
+            <num>1.0.1</num>
+            <compatibility>&gt;=10.0.0</compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.1.zip</download_url>
+        </version>
+        <version>
+            <num>1.0.0</num>
+            <compatibility>&gt;=10.0.0</compatibility>
+            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.0.zip</download_url>
+        </version>
+    </versions>
+    <langs>
+        <lang>ar_IQ</lang>
+        <lang>ar_SA</lang>
+        <lang>ar_SY</lang>
+        <lang>az_AZ</lang>
+        <lang>be_BY</lang>
+        <lang>bg_BG</lang>
+        <lang>bn_BD</lang>
+        <lang>ca_ES</lang>
+        <lang>cs_CZ</lang>
+        <lang>da_DK</lang>
+        <lang>de_DE</lang>
+        <lang>el_GR</lang>
+        <lang>en_GB</lang>
+        <lang>en_US</lang>
+        <lang>eo</lang>
+        <lang>es_419</lang>
+        <lang>es_AR</lang>
+        <lang>es_CL</lang>
+        <lang>es_CO</lang>
+        <lang>es_EC</lang>
+        <lang>es_ES</lang>
+        <lang>es_MX</lang>
+        <lang>es_VE</lang>
+        <lang>et_EE</lang>
+        <lang>eu_ES</lang>
+        <lang>fa_IR</lang>
+        <lang>fi_FI</lang>
+        <lang>fr_BE</lang>
+        <lang>fr_CA</lang>
+        <lang>fr_FR</lang>
+        <lang>gl_ES</lang>
+        <lang>he_IL</lang>
+        <lang>hi_IN</lang>
+        <lang>hr_HR</lang>
+        <lang>hu_HU</lang>
+        <lang>id_ID</lang>
+        <lang>is_IS</lang>
+        <lang>it_IT</lang>
+        <lang>ja_JP</lang>
+        <lang>km_KH</lang>
+        <lang>kn</lang>
+        <lang>ko_KR</lang>
+        <lang>lt_LT</lang>
+        <lang>lv_LV</lang>
+        <lang>mn_MN</lang>
+        <lang>ms_MY</lang>
+        <lang>nb_NO</lang>
+        <lang>nl_BE</lang>
+        <lang>nl_NL</lang>
+        <lang>nn_NO</lang>
+        <lang>pl_PL</lang>
+        <lang>pt_BR</lang>
+        <lang>pt_PT</lang>
+        <lang>ro_RO</lang>
+        <lang>ru_RU</lang>
+        <lang>sk_SK</lang>
+        <lang>sl_SI</lang>
+        <lang>sq_AL</lang>
+        <lang>sr_RS</lang>
+        <lang>sv_SE</lang>
+        <lang>th_TH</lang>
+        <lang>tr_TR</lang>
+        <lang>uk_UA</lang>
+        <lang>vi_VN</lang>
+        <lang>zh_CN</lang>
+        <lang>zh_HK</lang>
+        <lang>zh_TW</lang>
+    </langs>
+    <license>GPLv2+</license>
     <tags>
-        <tag>authentication</tag>
-        <tag>log</tag>
-        <tag>history</tag>
         <en>
             <tag>authentication</tag>
             <tag>log</tag>
             <tag>history</tag>
         </en>
-        <fr>
-            <tag>authentification</tag>
-            <tag>journal</tag>
-            <tag>historique</tag>
-        </fr>
-        <es>
+        <ar_IQ>
+            <tag>مصادقة</tag>
+            <tag>سجل</tag>
+            <tag>تاريخ</tag>
+        </ar_IQ>
+        <ar_SA>
+            <tag>مصادقة</tag>
+            <tag>سجل</tag>
+            <tag>تاريخ</tag>
+        </ar_SA>
+        <ar_SY>
+            <tag>مصادقة</tag>
+            <tag>سجل</tag>
+            <tag>تاريخ</tag>
+        </ar_SY>
+        <az_AZ>
+            <tag>autentifikasiya</tag>
+            <tag>jurnal</tag>
+            <tag>tarixçə</tag>
+        </az_AZ>
+        <be_BY>
+            <tag>аўтэнтыфікацыя</tag>
+            <tag>журнал</tag>
+            <tag>гісторыя</tag>
+        </be_BY>
+        <bg_BG>
+            <tag>удостоверяване</tag>
+            <tag>журнал</tag>
+            <tag>история</tag>
+        </bg_BG>
+        <bn_BD>
+            <tag>প্রমাণীকরণ</tag>
+            <tag>লগ</tag>
+            <tag>ইতিহাস</tag>
+        </bn_BD>
+        <ca_ES>
+            <tag>autenticació</tag>
+            <tag>registre</tag>
+            <tag>historial</tag>
+        </ca_ES>
+        <cs_CZ>
+            <tag>ověřování</tag>
+            <tag>záznam</tag>
+            <tag>historie</tag>
+        </cs_CZ>
+        <da_DK>
+            <tag>godkendelse</tag>
+            <tag>log</tag>
+            <tag>historik</tag>
+        </da_DK>
+        <de_DE>
+            <tag>authentifizierung</tag>
+            <tag>protokoll</tag>
+            <tag>verlauf</tag>
+        </de_DE>
+        <el_GR>
+            <tag>έλεγχος ταυτότητας</tag>
+            <tag>καταγραφή</tag>
+            <tag>ιστορικό</tag>
+        </el_GR>
+        <en_GB>
+            <tag>authentication</tag>
+            <tag>log</tag>
+            <tag>history</tag>
+        </en_GB>
+        <en_US>
+            <tag>authentication</tag>
+            <tag>log</tag>
+            <tag>history</tag>
+        </en_US>
+        <eo>
+            <tag>aŭtentikigo</tag>
+            <tag>protokolo</tag>
+            <tag>historio</tag>
+        </eo>
+        <es_419>
             <tag>autenticación</tag>
             <tag>registro</tag>
             <tag>historial</tag>
-        </es>
+        </es_419>
+        <es_AR>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_AR>
+        <es_CL>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_CL>
+        <es_CO>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_CO>
+        <es_EC>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_EC>
+        <es_ES>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_ES>
+        <es_MX>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_MX>
+        <es_VE>
+            <tag>autenticación</tag>
+            <tag>registro</tag>
+            <tag>historial</tag>
+        </es_VE>
+        <et_EE>
+            <tag>autentimine</tag>
+            <tag>logi</tag>
+            <tag>ajalugu</tag>
+        </et_EE>
+        <eu_ES>
+            <tag>autentifikazioa</tag>
+            <tag>erregistroa</tag>
+            <tag>historia</tag>
+        </eu_ES>
+        <fa_IR>
+            <tag>احراز هویت</tag>
+            <tag>لاگ</tag>
+            <tag>تاریخچه</tag>
+        </fa_IR>
+        <fi_FI>
+            <tag>todennus</tag>
+            <tag>loki</tag>
+            <tag>historia</tag>
+        </fi_FI>
+        <fr_BE>
+            <tag>authentification</tag>
+            <tag>journal</tag>
+            <tag>historique</tag>
+        </fr_BE>
+        <fr_CA>
+            <tag>authentification</tag>
+            <tag>journal</tag>
+            <tag>historique</tag>
+        </fr_CA>
+        <fr_FR>
+            <tag>authentification</tag>
+            <tag>journal</tag>
+            <tag>historique</tag>
+        </fr_FR>
+        <gl_ES>
+            <tag>autenticación</tag>
+            <tag>rexistro</tag>
+            <tag>historial</tag>
+        </gl_ES>
+        <he_IL>
+            <tag>אימות</tag>
+            <tag>יומן</tag>
+            <tag>היסטוריה</tag>
+        </he_IL>
+        <hi_IN>
+            <tag>प्रमाणीकरण</tag>
+            <tag>लॉग</tag>
+            <tag>इतिहास</tag>
+        </hi_IN>
+        <hr_HR>
+            <tag>autentifikacija</tag>
+            <tag>zapisnik</tag>
+            <tag>povijest</tag>
+        </hr_HR>
+        <hu_HU>
+            <tag>hitelesítés</tag>
+            <tag>napló</tag>
+            <tag>előzmények</tag>
+        </hu_HU>
+        <id_ID>
+            <tag>otentikasi</tag>
+            <tag>log</tag>
+            <tag>riwayat</tag>
+        </id_ID>
+        <is_IS>
+            <tag>auðkenning</tag>
+            <tag>skráning</tag>
+            <tag>saga</tag>
+        </is_IS>
+        <it_IT>
+            <tag>autenticazione</tag>
+            <tag>registro</tag>
+            <tag>cronologia</tag>
+        </it_IT>
+        <ja_JP>
+            <tag>認証</tag>
+            <tag>ログ</tag>
+            <tag>履歴</tag>
+        </ja_JP>
+        <km_KH>
+            <tag>ការផ្ទៀងផ្ទាត់សិទ្ធិ</tag>
+            <tag>កំណត់ហេតុ</tag>
+            <tag>ប្រវត្តិ</tag>
+        </km_KH>
+        <kn>
+            <tag>ದೃಢೀಕರಣ</tag>
+            <tag>ಲಾಗ್</tag>
+            <tag>ಇತಿಹಾಸ</tag>
+        </kn>
+        <ko_KR>
+            <tag>인증</tag>
+            <tag>로그</tag>
+            <tag>기록</tag>
+        </ko_KR>
+        <lt_LT>
+            <tag>autentifikavimas</tag>
+            <tag>žurnalas</tag>
+            <tag>istorija</tag>
+        </lt_LT>
+        <lv_LV>
+            <tag>autentifikācija</tag>
+            <tag>žurnāls</tag>
+            <tag>vēsture</tag>
+        </lv_LV>
+        <mn_MN>
+            <tag>баталгаажуулалт</tag>
+            <tag>бүртгэл</tag>
+            <tag>түүх</tag>
+        </mn_MN>
+        <ms_MY>
+            <tag>pengesahan</tag>
+            <tag>log</tag>
+            <tag>sejarah</tag>
+        </ms_MY>
+        <nb_NO>
+            <tag>autentisering</tag>
+            <tag>logg</tag>
+            <tag>historikk</tag>
+        </nb_NO>
+        <nl_BE>
+            <tag>authenticatie</tag>
+            <tag>log</tag>
+            <tag>geschiedenis</tag>
+        </nl_BE>
+        <nl_NL>
+            <tag>authenticatie</tag>
+            <tag>log</tag>
+            <tag>geschiedenis</tag>
+        </nl_NL>
+        <nn_NO>
+            <tag>autentisering</tag>
+            <tag>logg</tag>
+            <tag>historikk</tag>
+        </nn_NO>
+        <pl_PL>
+            <tag>uwierzytelnianie</tag>
+            <tag>dziennik</tag>
+            <tag>historia</tag>
+        </pl_PL>
         <pt_BR>
             <tag>autenticação</tag>
             <tag>log</tag>
             <tag>historico</tag>
         </pt_BR>
-        <it>
-            <tag>autenticazione</tag>
-            <tag>registro</tag>
-            <tag>cronologia</tag>
-        </it>
-        <de>
-            <tag>authentifizierung</tag>
-            <tag>protokoll</tag>
-            <tag>verlauf</tag>
-        </de>
-        <pl>
-            <tag>uwierzytelnianie</tag>
-            <tag>dziennik</tag>
-            <tag>historia</tag>
-        </pl>
-        <ru>
+        <pt_PT>
+            <tag>autenticação</tag>
+            <tag>log</tag>
+            <tag>historico</tag>
+        </pt_PT>
+        <ro_RO>
+            <tag>autentificare</tag>
+            <tag>jurnal</tag>
+            <tag>istoric</tag>
+        </ro_RO>
+        <ru_RU>
             <tag>аутентификация</tag>
             <tag>журнал</tag>
             <tag>история</tag>
-        </ru>
+        </ru_RU>
+        <sk_SK>
+            <tag>overovanie</tag>
+            <tag>záznam</tag>
+            <tag>história</tag>
+        </sk_SK>
+        <sl_SI>
+            <tag>preverjanje pristnosti</tag>
+            <tag>dnevnik</tag>
+            <tag>zgodovina</tag>
+        </sl_SI>
+        <sq_AL>
+            <tag>autentifikim</tag>
+            <tag>regjistër</tag>
+            <tag>historik</tag>
+        </sq_AL>
+        <sr_RS>
+            <tag>autentifikacija</tag>
+            <tag>dnevnik</tag>
+            <tag>istorija</tag>
+        </sr_RS>
+        <sv_SE>
+            <tag>autentisering</tag>
+            <tag>logg</tag>
+            <tag>historik</tag>
+        </sv_SE>
+        <th_TH>
+            <tag>การรับรองความถูกต้อง</tag>
+            <tag>บันทึก</tag>
+            <tag>ประวัติ</tag>
+        </th_TH>
+        <tr_TR>
+            <tag>kimlik doğrulama</tag>
+            <tag>günlük</tag>
+            <tag>geçmiş</tag>
+        </tr_TR>
+        <uk_UA>
+            <tag>автентифікація</tag>
+            <tag>журнал</tag>
+            <tag>історія</tag>
+        </uk_UA>
+        <vi_VN>
+            <tag>xác thực</tag>
+            <tag>nhật ký</tag>
+            <tag>lịch sử</tag>
+        </vi_VN>
+        <zh_CN>
+            <tag>身份验证</tag>
+            <tag>日志</tag>
+            <tag>历史记录</tag>
+        </zh_CN>
+        <zh_HK>
+            <tag>身份驗證</tag>
+            <tag>日誌</tag>
+            <tag>歷史記錄</tag>
+        </zh_HK>
+        <zh_TW>
+            <tag>身份驗證</tag>
+            <tag>日誌</tag>
+            <tag>歷史記錄</tag>
+        </zh_TW>
     </tags>
-    <versions>
-        <version>
-            <num>1.0.2</num>
-            <compatibility>
-                <glpi>&gt;=10.0.0</glpi>
-                <php>&gt;=7.4</php>
-            </compatibility>
-            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.2.zip</download_url>
-        </version>
-        <version>
-            <num>1.0.1</num>
-            <compatibility>
-                <glpi>&gt;=10.0.0</glpi>
-                <php>&gt;=7.4</php>
-            </compatibility>
-            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.1.zip</download_url>
-        </version>
-        <version>
-            <num>1.0.0</num>
-            <compatibility>
-                <glpi>&gt;=10.0.0</glpi>
-                <php>&gt;=7.4</php>
-            </compatibility>
-            <download_url>https://github.com/andrefelipeufcg/authhistory/archive/refs/tags/v1.0.0.zip</download_url>
-        </version>
-    </versions>
-</plugin>
+    <screenshots>
+        <screenshot>https://raw.githubusercontent.com/andrefelipeufcg/authhistory/main/docs/screenshots/screenshot1.png</screenshot>
+    </screenshots>
+</root>
