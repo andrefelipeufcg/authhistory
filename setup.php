@@ -1,5 +1,5 @@
 <?php
-define('AUTHHISTORY_VERSION', '1.0.2');
+define('AUTHHISTORY_VERSION', '1.0.3');
 define('AUTHHISTORY_GLPI_MIN', '10.0.0');
 //define('AUTHHISTORY_GLPI_MAX', '11.1.0');
 
