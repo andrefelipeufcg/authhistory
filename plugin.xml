@@ -104,4 +104,7 @@
             <tag>история</tag>
         </ru>
     </tags>
+    <screenshots>
+        <screenshot>https://raw.githubusercontent.com/andrefelipeufcg/authhistory/main/docs/screenshots/screenshot1.png</screenshot>
+    </screenshots>
 </root>
