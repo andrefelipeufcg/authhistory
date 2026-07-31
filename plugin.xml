@@ -6,6 +6,7 @@
     <logo>https://raw.githubusercontent.com/andrefelipeufcg/authhistory/main/logo.png</logo>
     <description>
         <short>
+            <en>Displays the history of logins and IPs in the user tab in GLPI.</en>
             <ar_IQ>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_IQ>
             <ar_SA>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SA>
             <ar_SY>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SY>
@@ -75,6 +76,7 @@
             <zh_TW>在GLPI的使用者分頁中顯示登入和IP的歷史記錄。</zh_TW>
         </short>
         <long>
+            <en>Displays the history of logins and IPs in the user tab in GLPI.</en>
             <ar_IQ>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_IQ>
             <ar_SA>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SA>
             <ar_SY>يعرض سجل تسجيلات الدخول وعناوين IP في علامة تبويب المستخدم في GLPI.</ar_SY>
@@ -245,6 +247,11 @@
     </langs>
     <license>GPLv2+</license>
     <tags>
+        <en>
+            <tag>authentication</tag>
+            <tag>log</tag>
+            <tag>history</tag>
+        </en>
         <ar_IQ>
             <tag>مصادقة</tag>
             <tag>سجل</tag>
