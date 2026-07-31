@@ -13,7 +13,7 @@ Um plugin leve e eficiente para o GLPI que adiciona uma aba de histórico detalh
 
 ## 📋 Pré-requisitos
 
-*   **GLPI:** Compatível com as versões `10.0.x` até `11.1.x`.
+*   **GLPI:** Compatível com GLPI 10+.
 *   **PHP:** Mesmos requisitos do GLPI (recomendado 8.1+).
 
 ## ⚙️ Instalação
