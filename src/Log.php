@@ -9,9 +9,18 @@ use Session;
 use TemplateRenderer;
 use User;
 
-class Log extends CommonDBTM {
-    
-    static $rightname = 'user';
+// GLPI 12 exige $rightname tipada (string); GLPI 10 proíbe o tipo.
+if ((new \ReflectionProperty(CommonDBTM::class, 'rightname'))->hasType()) {
+    abstract class LogBase extends CommonDBTM {
+        public static string $rightname = 'user';
+    }
+} else {
+    abstract class LogBase extends CommonDBTM {
+        public static $rightname = 'user';
+    }
+}
+
+class Log extends LogBase {
 
     static function getTypeName($nb = 0) {
         return __('Histórico de Acesso', 'authhistory');
@@ -86,14 +95,16 @@ class Log extends CommonDBTM {
         // Limita o tamanho da mensagem para evitar ReDoS
         $message = substr($message, 0, 255);
 
-        // Expressão regular para encontrar qualquer IPv4 ou IPv6 na string, ignorando o idioma do log
-        $ipv4 = '\b(?:\d{1,3}\.){3}\d{1,3}\b';
-        $ipv6 = '\b(?:[A-Fa-f0-9]{1,4}:){1,7}[A-Fa-f0-9]{1,4}::?\b|\b(?:[A-Fa-f0-9]{1,4}:){1,7}:|\b::(?:[A-Fa-f0-9]{1,4}:){0,7}[A-Fa-f0-9]{1,4}\b';
-        
-        if (preg_match("/($ipv4)/", $message, $matches)) {
-            return $matches[1];
-        } elseif (preg_match("/([A-Fa-f0-9:]+:[A-Fa-f0-9:]+)/", $message, $matches) && filter_var($matches[1], FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
-            return $matches[1]; // Fallback seguro para IPv6 usando o validador nativo do PHP
+        // Extrai todas as palavras que contêm caracteres válidos de IP (v4, v6 ou v4-mapped)
+        if (preg_match_all('/([A-Fa-f0-9\.:]+)/', $message, $matches)) {
+            // Verifica de trás para frente, pois o IP costuma ficar no fim da mensagem nativa,
+            // evitando falsos positivos caso o nome de usuário se pareça com um IP.
+            $candidates = array_reverse($matches[1]);
+            foreach ($candidates as $match) {
+                if (filter_var($match, FILTER_VALIDATE_IP)) {
+                    return $match;
+                }
+            }
         }
         
         return '-';
