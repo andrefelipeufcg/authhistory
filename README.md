@@ -4,7 +4,7 @@
 
 <a id="english"></a>
 # GLPI Auth History Plugin
-[![GLPI 10](https://img.shields.io/badge/GLPI-10-blue.svg)](https://glpi-project.org/)
+[![GLPI 10](https://img.shields.io/badge/GLPI-10-red.svg)](https://glpi-project.org/)
 [![GLPI 11](https://img.shields.io/badge/GLPI-11-blue.svg)](https://glpi-project.org/)
 [![GLPI 12](https://img.shields.io/badge/GLPI-12-FFD700.svg)](https://glpi-project.org/)
 [![License: GPL v3+](https://img.shields.io/badge/License-GPL%20v3%2B-green.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
@@ -61,7 +61,7 @@ Everything written after the word **"via"** will be automatically extracted and 
 
 <a id="português"></a>
 # Plugin GLPI Histórico de Autenticações
-[![GLPI 10](https://img.shields.io/badge/GLPI-10-blue.svg)](https://glpi-project.org/)
+[![GLPI 10](https://img.shields.io/badge/GLPI-10-red.svg)](https://glpi-project.org/)
 [![GLPI 11](https://img.shields.io/badge/GLPI-11-blue.svg)](https://glpi-project.org/)
 [![GLPI 12](https://img.shields.io/badge/GLPI-12-FFD700.svg)](https://glpi-project.org/)
 [![License: GPL v3+](https://img.shields.io/badge/License-GPL%20v3%2B-green.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
