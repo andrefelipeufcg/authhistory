@@ -1,5 +1,5 @@
 <?php
-define('AUTHHISTORY_VERSION', '1.0.3');
+define('AUTHHISTORY_VERSION', '1.1.0');
 define('AUTHHISTORY_GLPI_MIN', '10.0.0');
 //define('AUTHHISTORY_GLPI_MAX', '11.1.0');
 
@@ -8,7 +8,7 @@ function plugin_version_authhistory() {
         'name'           => __('Histórico de Autenticação', 'authhistory'),
         'version'        => AUTHHISTORY_VERSION,
         'author'         => 'andrefelipeufcg',
-        'license'        => 'GPLv2+',
+        'license'        => 'GPLv3+',
         'homepage'       => 'https://github.com/andrefelipeufcg/authhistory',
         'requirements'   => [
             'glpi' => [
